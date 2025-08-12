@@ -1,1 +1,3 @@
-# dotnet-patterns-lab
+# 01-builder-pattern
+***Builder*** is a creational pattern used when object construction is complex and benefits from a ***two-phase lifecycle***: first, a mutable configuration phase where you add options step by step; then a build phase that validates invariants and produces a stable, ready-to-use object. This concentrates validation at build time and avoids telescoping constructors (long parameter lists) and scattered setup. In contrast, a ***Factory*** returns an object immediately from a small set of inputs, while a Builder accumulates choices and only materializes the object when ```Build()``` is called. Crucially, by swapping the builder (or the components it controls), the ***same construction steps can yield different representations*** of the product.
+
